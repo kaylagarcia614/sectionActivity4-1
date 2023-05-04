@@ -9,12 +9,12 @@
     <script>
         class Demo extends Phaser.Scene {
             create() {
-                this.meep = this.add.text(10,10,'🐁').setOrigin(0.5,0.5);
+                this.meep = this.add.text(10,10,'🐵').setOrigin(0.5,0.5);
                 this.input.setDefaultCursor('none');
                 this.input.on('pointerdown', (event) => {
                     this.tweens.add({
                         targets: this.meep,
-                        scale: 2,
+                        scale: 20,
                         duration: 100
                     });
                 });
@@ -68,13 +68,13 @@
             width: 640,
             height: 520,
             scene: Demo,
-            backgroundColor: 0xdddddd,
+            backgroundColor: 0x000000,
             parent: 'here'
         });
     </script>
 </head>
 <body>
     <div id="here"></div>
-    Drag the mouse around the screen.
+    Drag the monkey around the screen.
 </body>
 </html>
